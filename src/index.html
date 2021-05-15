@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Test widget for Travel Payouts"
+    />
+    <title>Travel Payouts Test Widget</title>
+  </head>
+  <body>
+    <h1 class="title"><%= t.title %></h1>
+    <div class="container">
+      <p class="description"><%= t.description %></p>
+      <form class="form">
+        <input name="depart-date" type="date">
+        <input name="return-date" type="date">
+        <button type="submit"><%= t.submit %></button>
+      </form>
+    </div>
+  </body>
+</html>

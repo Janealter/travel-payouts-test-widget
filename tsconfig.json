@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "module": "es6",
+    "target": "es5",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "module",
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "space-before-blocks": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "error",
+          "info"
+        ]
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "eol-last": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/quotes": [
+          "error",
+          "single"
+        ],
+        "@typescript-eslint/keyword-spacing": "error",
+        "@typescript-eslint/semi": "error",
+        "@typescript-eslint/comma-dangle": [
+          "error",
+          {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline"
+          }
+        ],
+        "@typescript-eslint/member-delimiter-style": "error",
+        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/space-before-function-paren": "error",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/adjacent-overload-signatures": "error",
+        "@typescript-eslint/no-floating-promises": "error"
+      }
+    }
+  ],
+  "env": {
+    "browser": true
+  }
+}
