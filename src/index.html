@@ -10,14 +10,18 @@
     <title>Travel Payouts Test Widget</title>
   </head>
   <body>
-    <h1 class="title"><%= t.title %></h1>
-    <div class="container">
-      <p class="description"><%= t.description %></p>
-      <form class="form">
-        <input name="depart-date" type="date">
-        <input name="return-date" type="date">
-        <button type="submit"><%= t.submit %></button>
-      </form>
-    </div>
+    <main class="main-container">
+      <h1 class="title"><%= t.title %></h1>
+      <div class="inner-container">
+        <p class="description"><%= t.description %></p>
+        <form class="form">
+          <div class="input-container">
+            <input class="input" name="depart-date" type="text" placeholder="<%= t.departDate %>">
+            <input class="input" name="return-date" type="text" placeholder="<%= t.returnDate %>">
+          </div>
+          <button class="button" type="submit"><%= t.submit %></button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
