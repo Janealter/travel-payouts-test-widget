@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-const enI18n = require('./i18n/en.json');
-const ruI18n = require('./i18n/ru.json');
+const enI18n = require('./src/i18n/en.json');
+const ruI18n = require('./src/i18n/ru.json');
 
 const translations = [
   { lang: 'en', t: enI18n },
