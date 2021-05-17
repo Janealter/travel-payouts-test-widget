@@ -82,13 +82,17 @@ body {
 .input {
   font-size: 0.875rem;
   line-height: 1.2;
-  padding: 12px 10px;
+  padding: 12px 34px 12px 10px;
   border: none;
   border-radius: 2px;
   margin: 0 10px;
   max-width: 200px;
   min-width: 160px;
   width: 100%;
+  background: no-repeat url('./assets/calendar.svg');
+  background-color: #ffffff;
+  background-size: 15px 17px;
+  background-position: right 10px bottom 50%;
 }
 .input::placeholder {
   color: #898989;
