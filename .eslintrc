@@ -9,7 +9,7 @@
     "@typescript-eslint"
   ],
   "parserOptions": {
-    "ecmaVersion": 5,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "project": "tsconfig.json"
   },
@@ -66,7 +66,8 @@
         "@typescript-eslint/space-before-function-paren": "error",
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/no-floating-promises": "error"
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     }
   ],

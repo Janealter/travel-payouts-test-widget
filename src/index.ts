@@ -1,3 +1,7 @@
-import './utils/set-style';
+import { setupColors } from './utils/style';
+import { setupDatePickers } from './utils/date-pickers';
 
-import './style.css';
+import './styles/index.css';
+
+setupColors();
+setupDatePickers().catch(console.error);

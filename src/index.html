@@ -16,12 +16,23 @@
         <p class="description"><%= t.description %></p>
         <form class="form">
           <div class="input-container">
-            <input class="input" name="depart-date" type="text" placeholder="<%= t.departDate %>">
-            <input class="input" name="return-date" type="text" placeholder="<%= t.returnDate %>">
+            <div class="input-wrapper">
+              <input class="input" name="depart-date" type="text" placeholder="<%= t.departDate %>" pattern="\d\d\.\d\d\.\d\d\d\d" required>
+              <button class="date-picker-button date-picker-button--depart" type="button">
+                <img src="<%=require('./assets/calendar.svg')%>" alt="calendar">
+              </button>
+            </div>
+            <div class="input-wrapper">
+              <input class="input" name="return-date" type="text" placeholder="<%= t.returnDate %>" pattern="\d\d\.\d\d\.\d\d\d\d" required>
+              <button class="date-picker-button date-picker-button--return" type="button">
+                <img src="<%=require('./assets/calendar.svg')%>" alt="calendar">
+              </button>
+            </div>
           </div>
           <button class="button" type="submit"><%= t.submit %></button>
         </form>
       </div>
     </main>
+    <div class="date-picker"></div>
   </body>
 </html>

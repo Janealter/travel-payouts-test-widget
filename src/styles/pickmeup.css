@@ -1,0 +1,108 @@
+.date-picker {
+  display: none;
+}
+
+.pickmeup {
+	background-color: #ffffff;
+  border-radius: 0;
+}
+
+.pickmeup.pmu-flat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pickmeup .pmu-instance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.pickmeup .pmu-instance nav {
+  justify-content: space-between;
+	line-height: 1.5em;
+  margin-bottom: 5px;
+}
+
+.pickmeup .pmu-instance nav .pmu-prev,
+.pickmeup .pmu-instance nav .pmu-next {
+	display: none;
+	height: 1.5em;
+	width: 1em;
+}
+
+.pickmeup.pmu-view-years .pmu-instance .pmu-years,
+.pickmeup.pmu-view-months .pmu-instance .pmu-months,
+.pickmeup.pmu-view-days .pmu-instance .pmu-days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pickmeup.pmu-view-years .pmu-instance .pmu-years,
+.pickmeup.pmu-view-months .pmu-instance .pmu-months {
+  justify-content: center;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week *,
+.pickmeup .pmu-instance .pmu-days * {
+	height: 2em;
+	width: 2em;
+}
+
+.pickmeup .pmu-instance .pmu-button {
+  border: none;
+  padding: 0;
+  color: #666;
+  background-color: transparent;
+}
+.pickmeup .pmu-instance .pmu-button:hover {
+  color: var(--bg-color);
+}
+.pickmeup .pmu-instance .pmu-button:focus {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.85);
+}
+
+.pickmeup .pmu-instance .pmu-days .pmu-button {
+  position: relative;
+}
+.pickmeup .pmu-instance .pmu-days .pmu-button > span:last-child {
+  font-size: 0.6em;
+  line-height: 1;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pickmeup .pmu-instance .pmu-days .pmu-button > span:first-child {
+  position: absolute;
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 12px));
+}
+
+.pickmeup .pmu-instance .pmu-today {
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px var(--button-color);
+	background: transparent;
+	color: #666;
+}
+
+.pickmeup .pmu-instance .pmu-not-in-month {
+	color: #c7c7c7;
+}
+
+.pickmeup .pmu-instance .pmu-selected {
+  border-radius: 2px;
+  box-shadow: none;
+	background-color: var(--button-color);
+	color: #fff;
+}
+.pickmeup .pmu-instance .pmu-selected:hover {
+  background-color: var(--button-color);
+}
