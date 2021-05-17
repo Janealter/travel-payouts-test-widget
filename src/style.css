@@ -97,6 +97,10 @@ body {
 .input::placeholder {
   color: #898989;
 }
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.85);
+}
 
 .button {
   font-size: 1.25rem;
@@ -107,6 +111,13 @@ body {
   padding: 8px 10px;
   max-width: 240px;
   width: 100%;
+  cursor: pointer;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+}
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.85),
+              inset 0px -2px 0px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
