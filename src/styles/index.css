@@ -3,18 +3,24 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('./fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'),
-       url('./fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'),
-       url('./fonts/open-sans-v18-latin_cyrillic-regular.ttf') format('truetype');
+       url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'),
+       url('../fonts/open-sans-v18-latin_cyrillic-regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   src: local(''),
-       url('./fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'),
-       url('./fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff'),
-       url('./fonts/open-sans-v18-latin_cyrillic-600.ttf') format('truetype');
+       url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'),
+       url('../fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff'),
+       url('../fonts/open-sans-v18-latin_cyrillic-600.ttf') format('truetype');
+}
+
+:root {
+  --bg-color: #4A90E2;
+  --font-color: #FFFFFF;
+  --button-color: #F5A623;
 }
 
 html {
@@ -28,6 +34,8 @@ html, input, button {
 }
 
 body {
+  color: var(--font-color);
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,20 +87,21 @@ body {
   width: 100%;
 }
 
-.input {
-  font-size: 0.875rem;
-  line-height: 1.2;
-  padding: 12px 34px 12px 10px;
-  border: none;
-  border-radius: 2px;
+.input-wrapper {
+  position: relative;
   margin: 0 10px;
   max-width: 200px;
   min-width: 160px;
   width: 100%;
-  background: no-repeat url('./assets/calendar.svg');
-  background-color: #ffffff;
-  background-size: 15px 17px;
-  background-position: right 10px bottom 50%;
+}
+
+.input {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 12px 34px 12px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
 }
 .input::placeholder {
   color: #898989;
@@ -100,6 +109,28 @@ body {
 .input:focus {
   outline: none;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.85);
+}
+
+.date-picker-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  background-color: transparent !important;
+  cursor: pointer;
+}
+.date-picker-button:focus {
+  outline: none;
+  box-shadow: inset 0 0 2px 1px rgb(73 144 226);
+}
+.date-picker-button > img {
+  width: 15px;
+  height: 17px;
 }
 
 .button {
@@ -112,6 +143,8 @@ body {
   max-width: 240px;
   width: 100%;
   cursor: pointer;
+  background-color: var(--button-color);
+  color: var(--font-color);
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
 }
 .button:focus {
@@ -130,7 +163,7 @@ body {
     margin: 0 0 15px 0;
   }
 
-  .input {
+  .input-wrapper {
     max-width: 220px;
     min-width: 130px;
   }
@@ -151,7 +184,7 @@ body {
     flex-direction: column;
   }
 
-  .input {
+  .input-wrapper {
     min-width: 110px;
   }
 
@@ -178,10 +211,10 @@ body {
     flex-wrap: wrap;
   }
 
-  .input {
+  .input-wrapper {
     max-width: 100%;
   }
-  .input:not(:last-child) {
+  .input-wrapper:not(:last-child) {
     margin-bottom: 15px;
   }
 
