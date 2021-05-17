@@ -12,6 +12,7 @@ const pickMeUpConf = {
   format: 'd.m.Y',
   locale: lang,
   flat: true,
+  min: Date.now(),
   // Ref: https://github.com/nazar-pc/PickMeUp/blob/669c9e3204589d60b5074aff5733a3eee7ee21b1/js/pickmeup.js#L1359
   instance_template: function (options: any) {
     return '<div class="pmu-instance">' +
