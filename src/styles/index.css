@@ -59,7 +59,7 @@ body {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.375;
-  margin: 2px 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .inner-container {
@@ -154,6 +154,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .title {
+    margin: 3px 0 10px 0;
+  }
+
   .inner-container {
     flex-direction: column;
   }
