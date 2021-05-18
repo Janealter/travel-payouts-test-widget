@@ -3,7 +3,7 @@
 }
 
 .pickmeup {
-	background-color: #fff;
+  background-color: #fff;
   border-radius: 0;
 }
 
@@ -19,21 +19,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .pickmeup .pmu-instance nav {
   justify-content: space-between;
-	line-height: 1.5em;
+  line-height: 1.5em;
   margin-bottom: 5px;
 }
 
 .pickmeup .pmu-instance nav .pmu-prev,
 .pickmeup .pmu-instance nav .pmu-next {
-	display: none;
-	height: 1.5em;
-	width: 1em;
+  height: 1.5em;
+  width: 1em;
 }
 
 .pickmeup.pmu-view-years .pmu-instance .pmu-years,
@@ -50,8 +49,8 @@
 
 .pickmeup .pmu-instance .pmu-day-of-week *,
 .pickmeup .pmu-instance .pmu-days * {
-	height: 2em;
-	width: 2em;
+  height: 2em;
+  width: 2em;
 }
 
 .pickmeup .pmu-instance .pmu-button {
@@ -89,25 +88,25 @@
 .pickmeup .pmu-instance .pmu-today {
   border-radius: 2px;
   box-shadow: inset 0 0 0 1px var(--button-color);
-	background: transparent;
+  background: transparent;
 }
 
 .pickmeup .pmu-instance .pmu-not-in-month {
-	color: #c7c7c7;
+  color: #c7c7c7;
 }
 
 .pickmeup .pmu-instance .pmu-selected {
   border-radius: 2px;
   box-shadow: none;
-	background-color: var(--button-color);
-	color: #fff;
+  background-color: var(--button-color);
+  color: #fff;
 }
 .pickmeup .pmu-instance .pmu-selected:hover {
   background-color: var(--button-color);
 }
 
 .pickmeup .pmu-instance .pmu-not-in-month.pmu-disabled:hover {
-	color: #c7c7c7;
+  color: #c7c7c7;
 }
 .pickmeup .pmu-instance .pmu-disabled:hover {
   color: #666;
